@@ -10,6 +10,18 @@ router.get('/', function(req, res, next) {
       {
         id: 'room_1',
         title: 'Room 1'
+      },
+      {
+        id: 'room_2',
+        title: 'Room 2'
+      },
+      {
+        id: 'room_3',
+        title: 'Outside'
+      },
+      {
+        id: 'room_4',
+        title: 'Room 4'
       }
     ],
     tumblers: [
