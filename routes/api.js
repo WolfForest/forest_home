@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var requestProxy = require('express-request-proxy');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -45,5 +46,9 @@ router.get('/', function(req, res, next) {
     ]
   });
 });
+router.use("/test", requestProxy({
+    url: "https://e621.net/post/index.json?limit=10",
+    timeout: 5000,  // in milliseconds, two seconds
+}));
 
 module.exports = router;
