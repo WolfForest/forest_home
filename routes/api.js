@@ -48,6 +48,10 @@ router.get('/', function(req, res, next) {
 });
 router.use("/test", requestProxy({
     url: "http://e621.net/post/index.json?limit=10",
+    timeout: 20000,  // in milliseconds, two seconds
+}));
+router.use("/data/preview/*", requestProxy({
+    url: "https://static1.e621.net/data/preview/*",
     timeout: 5000,  // in milliseconds, two seconds
 }));
 
