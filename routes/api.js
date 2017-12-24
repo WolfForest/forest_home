@@ -47,7 +47,7 @@ router.get('/', function(req, res, next) {
   });
 });
 router.use("/test", requestProxy({
-    url: "https://e621.net/post/index.json?limit=10",
+    url: "http://e621.net/post/index.json?limit=10",
     timeout: 5000,  // in milliseconds, two seconds
 }));
 
